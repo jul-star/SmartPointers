@@ -12,6 +12,7 @@
 #include "DerB.h"
 #include <iostream>
 #include <vector>
+#include  "SharedFromUnique.h"
 
 void Test01();
 void Test02();
@@ -35,7 +36,7 @@ int main()
 		// Test02();
 		//Test03();
 
-		Test_Vector5();
+		S4U::Shared4Unique03();
 	}
 	return 0;
 }

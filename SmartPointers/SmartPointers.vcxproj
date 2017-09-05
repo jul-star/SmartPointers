@@ -152,6 +152,7 @@
     <ClInclude Include="DerA.h" />
     <ClInclude Include="DerB.h" />
     <ClInclude Include="Factory.h" />
+    <ClInclude Include="SharedFromUnique.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -163,6 +164,7 @@
     <ClCompile Include="DerA.cpp" />
     <ClCompile Include="DerB.cpp" />
     <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="SharedFromUnique.cpp" />
     <ClCompile Include="SmartPointers.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
