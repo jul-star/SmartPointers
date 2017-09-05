@@ -19,10 +19,11 @@ void Test03();
 void Test04();
 void Test_Reset();
 void Test_Assign();
-void Test_Vector1();
+void Test_Vector_AddShPtr2Vector();
 void Test_Vector2();
 void Test_Vector3();
 void Test_Vector4();
+void Test_Vector5();
 std::shared_ptr<B> createShared_B();
 
 void doPrint3SharedPtr(std::shared_ptr<B> &pb1, std::shared_ptr<B> &pb2, std::shared_ptr<B> &pb3);
@@ -34,7 +35,7 @@ int main()
 		// Test02();
 		//Test03();
 
-		Test_Vector4();
+		Test_Vector5();
 	}
 	return 0;
 }
@@ -98,7 +99,7 @@ void Test_Assign()
 	doPrint3SharedPtr(pb1, pb2, pb3);
 }
 
-void Test_Vector1()
+void Test_Vector_AddShPtr2Vector()
 {
 	B b1;
 
@@ -181,6 +182,41 @@ void Test_Vector4()
 }
 
 
+void Test_Vector5()
+{
+	B b1;
+	std::vector<std::shared_ptr<B>> vPointers;
+	vPointers.push_back(createShared_B());
+	vPointers.push_back(createShared_B());
+	vPointers.push_back(createShared_B());
+	doPrint3SharedPtr(vPointers.at(0), vPointers.at(1), vPointers.at(2));
+	size_t size = 0;
+	for (auto item : vPointers)
+	{
+		size += sizeof(item);
+	}
+	std::cout << "vPointers=" << sizeof(vPointers) << ", " << size << std::endl;
+	for(auto item: vPointers)
+	{
+		item->print();
+	}
+
+
+	std::vector<B*> vBs;
+	vBs.push_back(new B());
+	vBs.push_back(new B());
+	vBs.push_back(new B());
+	size = 0;
+	for (auto item : vBs)
+	{
+		size += sizeof(item);
+	}
+	std::cout << "vBs=" << sizeof(vBs) << ", " << size << std::endl;
+	for (auto item: vBs)
+	{
+		item->print();
+	}
+}
 void Test04(const A& a)
 {
 	// std::unique_ptr<ABC> myA(std::move(a));
