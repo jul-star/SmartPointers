@@ -13,6 +13,7 @@
 #include <iostream>
 #include <vector>
 #include  "SharedFromUnique.h"
+#include "VectorOfSharedPtr.h"
 
 void Test01();
 void Test02();
@@ -36,7 +37,9 @@ int main()
 		// Test02();
 		//Test03();
 
-		S4U::Shared4Unique03();
+		// S4U::Shared4Unique03();
+		//Vectors::AssignVectors();
+		Vectors::TestcreateVector();
 	}
 	return 0;
 }

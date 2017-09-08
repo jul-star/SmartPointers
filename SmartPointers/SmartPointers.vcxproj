@@ -152,9 +152,11 @@
     <ClInclude Include="DerA.h" />
     <ClInclude Include="DerB.h" />
     <ClInclude Include="Factory.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="SharedFromUnique.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="VectorOfSharedPtr.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="A.cpp" />
@@ -172,6 +174,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="VectorOfSharedPtr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SmartPointers.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -8,5 +8,8 @@ public:
 	B();
 	~B();
 	void print() const override;
+private:
+	static unsigned int index;
+	unsigned int ID;
 };
 

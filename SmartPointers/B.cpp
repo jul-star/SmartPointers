@@ -2,7 +2,9 @@
 #include "B.h"
 #include <iostream>
 
-B::B()
+unsigned int B::index=0;
+B::B():
+	ID(++index)
 {
 }
 
@@ -13,5 +15,5 @@ B::~B()
 
 void B::print() const
 {
-	std::cout << "hello from B" << std::endl;
+	std::cout << "hello from B:" << ID << " "<< std::endl;
 }
